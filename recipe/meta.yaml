@@ -18,14 +18,17 @@ requirements:
         - m4
         - autoconf
         - perl
+        - libtool
     run:
         - m4
         - autoconf
         - perl
+        - libtool
 
 test:
     commands:
         - automake --help
+        - conda inspect linkages -n _test automake  # [linux]
 
 about:
     home: http://www.gnu.org/software/automake/
