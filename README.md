@@ -3,13 +3,25 @@ About automake
 
 Home: http://www.gnu.org/software/automake/
 
-Package license: GPL 3
+Package license: GPL-2.0
 
 Feedstock license: BSD 3-Clause
 
 Summary: Tool for automatically generating Makefile.in files compliant with the GNU Coding Standards.
 
 
+
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/automake-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/automake-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/automake-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/automake-feedstock)
+Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/automake/badges/version.svg)](https://anaconda.org/conda-forge/automake)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/automake/badges/downloads.svg)](https://anaconda.org/conda-forge/automake)
 
 Installing automake
 ===================
@@ -66,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/automake-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/automake-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/automake-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/automake-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/automake/badges/version.svg)](https://anaconda.org/conda-forge/automake)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/automake/badges/downloads.svg)](https://anaconda.org/conda-forge/automake)
 
 
 Updating automake-feedstock
