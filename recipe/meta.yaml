@@ -1,38 +1,42 @@
 {% set version = "1.15" %}
+{% set sha256 = "7946e945a96e28152ba5a6beb0625ca715c6e32ac55f2e353ef54def0c8ed924" %}
+{% set build = 1 %}
 
 package:
-    name: automake
-    version: {{ version }}
+  name: automake
+  version: {{ version }}
 
 source:
-    fn: automake-{{ version }}.tar.gz
-    url: http://ftp.gnu.org/gnu/automake/automake-{{ version }}.tar.gz
-    sha256: 7946e945a96e28152ba5a6beb0625ca715c6e32ac55f2e353ef54def0c8ed924
+  fn: automake-{{ version }}.tar.gz
+  url: http://ftp.gnu.org/gnu/automake/automake-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
-    number: 0
-    skip: True  # [win]
+  number: {{ build }}
+  skip: true  # [win]
 
 requirements:
-    build:
-        - m4
-        - autoconf
-        - perl
-    run:
-        - m4
-        - autoconf
-        - perl
+  build:
+    - m4
+    - autoconf
+    - perl
+  run:
+    - m4
+    - autoconf
+    - perl
 
 test:
-    commands:
-        - automake --help
+  commands:
+    - automake --help
 
 about:
-    home: http://www.gnu.org/software/automake/
-    license: GPL 3
-    summary: Tool for automatically generating Makefile.in files compliant with the GNU Coding Standards.
+  home: http://www.gnu.org/software/automake/
+  license: GPL-2.0
+  license_family: GPL
+  license_file: COPYING
+  summary: Tool for automatically generating Makefile.in files compliant with the GNU Coding Standards.
 
 extra:
-    recipe-maintainers:
-        - jakirkham
-        - ocefpaf
+  recipe-maintainers:
+    - jakirkham
+    - ocefpaf
