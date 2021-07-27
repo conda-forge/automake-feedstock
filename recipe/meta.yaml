@@ -7,9 +7,6 @@ package:
 source:
   url: http://ftp.gnu.org/gnu/automake/automake-{{ version }}.tar.gz
   sha256: 8a0f0be7aaae2efa3a68482af28e5872d8830b9813a6a932a2571eac63ca1794
-  patches:
-    - 0001-apple-silicon.patch
-    - 0002-apple-silicon.patch
 
 build:
   number: 0
