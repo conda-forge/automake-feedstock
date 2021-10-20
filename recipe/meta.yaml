@@ -12,8 +12,10 @@ source:
     - 0002-apple-silicon.patch
 
 build:
-  number: 3
+  number: 4
   skip: true  # [win]
+  ignore_run_exports_from:
+    - perl 5.*
 
 requirements:
   build:
@@ -21,12 +23,12 @@ requirements:
   host:
     - m4
     - autoconf
-    - perl *
+    - perl 5.*
     - make
   run:
     - m4
     - autoconf
-    - perl *
+    - perl 5.*
 
 test:
   commands:
