@@ -17,7 +17,6 @@ Automake is a tool for automatically generating Makefile.ins from files
 called Makefile.am.  It assumes that the project uses Autoconf and enforces
 certain restrictions on the configure.ac contents.
 
-
 Current build status
 ====================
 
