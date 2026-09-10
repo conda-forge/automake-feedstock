@@ -1,18 +1,22 @@
-{% set version = "1.17" %}
+schema_version: 1
+
+context:
+  name: automake
+  version: "1.19"
 
 package:
-  name: automake
-  version: {{ version }}
+  name: ${{ name }}
+  version: ${{ version }}
 
 source:
-  url: http://ftp.gnu.org/gnu/automake/automake-{{ version }}.tar.gz
-  sha256: 397767d4db3018dd4440825b60c64258b636eaf6bf99ac8b0897f06c89310acd
+  url: http://ftp.gnu.org/gnu/automake/automake-${{ version }}.tar.gz
+  sha256: 79e8b1f7a967e87ce8a9ded76bee7f793d0ce1886ab2002feb1b0510f578b75a
 
 build:
   number: 0
-  skip: true  # [win]
-  ignore_run_exports_from:
-    - perl 5.*
+  skip:
+    - win
+  script: build.sh
 
 requirements:
   build:
@@ -26,13 +30,16 @@ requirements:
     - m4
     - autoconf
     - perl 5.*
+  ignore_run_exports:
+    from_package:
+      - perl 5.*
 
-test:
-  commands:
+tests:
+  - script:
     - automake --help
 
 about:
-  home: http://www.gnu.org/software/automake/
+  homepage: http://www.gnu.org/software/automake/
   license: GPL-3.0-or-later
   license_file: COPYING
   summary: Tool for automatically generating Makefile.in files compliant with the GNU Coding Standards.
@@ -40,9 +47,8 @@ about:
     Automake is a tool for automatically generating Makefile.ins from files
     called Makefile.am.  It assumes that the project uses Autoconf and enforces
     certain restrictions on the configure.ac contents.
-  dev_url: https://git.savannah.gnu.org/git/automake.git
-  doc_url: https://www.gnu.org/software/automake/manual/automake.html
-  doc_source_url: http://git.savannah.gnu.org/cgit/automake.git/tree/doc
+  repository: https://git.savannah.gnu.org/git/automake.git
+  documentation: https://www.gnu.org/software/automake/manual/automake.html
 
 extra:
   recipe-maintainers:
